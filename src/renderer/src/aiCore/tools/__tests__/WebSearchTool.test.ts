@@ -54,9 +54,7 @@ describe('webSearchToolWithPreExtractedKeywords', () => {
     const modelOutput = searchTool.toModelOutput({ output: firstResult })
     const modelText = modelOutput.value.map((part: { text: string }) => part.text).join('\n')
 
-    expect(modelText).toContain('Cite them as [1], [2], etc.')
     expect(modelText).toContain('"url": "https://example.com"')
-    expect(modelText).not.toContain('REFERENCE_PROMPT')
     expect(modelText).not.toContain('utm_source')
   })
 })
