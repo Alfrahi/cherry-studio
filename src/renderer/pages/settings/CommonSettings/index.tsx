@@ -580,7 +580,7 @@ const CommonSettings: FC = () => {
             <Button onClick={() => handleZoomFactor(0.1)} variant="ghost" size="icon">
               <Plus size="14" />
             </Button>
-            <Button onClick={() => handleZoomFactor(0, true)} className="ml-2" variant="ghost" size="icon">
+            <Button onClick={() => handleZoomFactor(0, true)} className="ms-2" variant="ghost" size="icon">
               <ResetIcon size="14" />
             </Button>
           </ZoomButtonGroup>
@@ -734,7 +734,7 @@ const CommonSettings: FC = () => {
         <SettingTitle>{t('settings.general.spell_check.label')}</SettingTitle>
         <SettingDivider />
         <SettingRow>
-          <RowFlex className="mr-4 flex-1 items-center justify-between">
+          <RowFlex className="me-4 flex-1 items-center justify-between">
             <SettingRowTitle>{t('settings.general.spell_check.label')}</SettingRowTitle>
             {enableSpellCheck && !isMac && (
               <Selector<string>

@@ -71,7 +71,7 @@ const InputFileThumbnail: FC<InputFileThumbnailProps> = ({ entry, onRemove, remo
         type="button"
         onClick={onRemove}
         aria-label={removeLabel}
-        className="absolute top-0.5 right-0.5 z-10 flex size-4 cursor-pointer items-center justify-center rounded-full bg-background/95 text-foreground opacity-0 shadow-sm transition group-hover:opacity-100">
+        className="absolute end-0.5 top-0.5 z-10 flex size-4 cursor-pointer items-center justify-center rounded-full bg-background/95 text-foreground opacity-0 shadow-sm transition group-hover:opacity-100">
         <X className="size-3" />
       </button>
     </div>

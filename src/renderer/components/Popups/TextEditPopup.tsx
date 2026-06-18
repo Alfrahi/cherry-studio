@@ -205,7 +205,7 @@ const PopupContainer: React.FC<Props> = ({
               setTextValue(event.target.value)
             }}
             style={textareaStyle}
-            className={cn(showTranslate && 'pr-10', textareaClassName)}
+            className={cn(showTranslate && 'pe-10', textareaClassName)}
           />
           {showTranslate && (
             <Button
@@ -214,7 +214,7 @@ const PopupContainer: React.FC<Props> = ({
               size="icon-sm"
               onClick={handleTranslate}
               aria-label={t('common.translate_text')}
-              className="absolute top-2 right-2 text-muted-foreground hover:text-foreground"
+              className="absolute end-2 top-2 text-muted-foreground hover:text-foreground"
               disabled={isTranslating || !textValue.trim()}>
               {isTranslating ? <Loader2 className="size-4 animate-spin" /> : <Languages size={16} />}
             </Button>

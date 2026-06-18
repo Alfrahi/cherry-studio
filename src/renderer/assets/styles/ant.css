@@ -154,7 +154,7 @@
 }
 
 .ant-modal:not(.ant-modal-confirm) .ant-modal-content .ant-modal-close {
-  margin-right: 2px;
+  margin-inline-end: 2px;
 }
 
 .ant-modal:not(.ant-modal-confirm) .ant-modal-content .ant-modal-header {
@@ -174,7 +174,7 @@
 }
 
 .ant-modal:not(.ant-modal-confirm) .ant-modal-content .ant-modal-confirm-btns {
-  margin-bottom: 8px;
+  margin-block-end: 8px;
 }
 
 .ant-modal.ant-modal-confirm.ant-modal-confirm-confirm .ant-modal-content {
@@ -190,11 +190,11 @@
 }
 
 .ant-collapse:not(.ant-collapse-ghost) .ant-collapse-content {
-  border-top: 0.5px solid var(--color-border) !important;
+  border-block-start: 0.5px solid var(--color-border) !important;
 }
 
 .ant-color-picker .ant-collapse:not(.ant-collapse-ghost) .ant-collapse-content {
-  border-top: none !important;
+  border-block-start: none !important;
 }
 
 .ant-collapse-header-text {

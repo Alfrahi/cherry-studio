@@ -394,9 +394,9 @@ const TaskDetail: FC<{
                     }}
                     placeholder={t('agent.cherryClaw.tasks.intervalPlaceholder')}
                     disabled={isCompleted}
-                    className="pr-10"
+                    className="pe-10"
                   />
-                  <span className="-translate-y-1/2 pointer-events-none absolute top-1/2 right-3 text-muted-foreground text-xs">
+                  <span className="-translate-y-1/2 pointer-events-none absolute end-3 top-1/2 text-muted-foreground text-xs">
                     {t('agent.cherryClaw.tasks.intervalUnit')}
                   </span>
                 </div>
@@ -432,9 +432,9 @@ const TaskDetail: FC<{
                   }}
                   placeholder={t('agent.cherryClaw.tasks.timeout.placeholder')}
                   disabled={isCompleted}
-                  className="pr-10"
+                  className="pe-10"
                 />
-                <span className="-translate-y-1/2 pointer-events-none absolute top-1/2 right-3 text-muted-foreground text-xs">
+                <span className="-translate-y-1/2 pointer-events-none absolute end-3 top-1/2 text-muted-foreground text-xs">
                   {t('agent.cherryClaw.tasks.intervalUnit')}
                 </span>
               </div>
@@ -619,18 +619,18 @@ const TaskLogsInline: FC<{ taskId: string; agentId: string }> = ({ taskId, agent
   return (
     <div className="flex flex-col gap-2">
       <div className="relative">
-        <Search className="-translate-y-1/2 absolute top-1/2 left-2.5 size-3 text-muted-foreground" />
+        <Search className="-translate-y-1/2 absolute start-2.5 top-1/2 size-3 text-muted-foreground" />
         <UIInput
           placeholder={t('agent.cherryClaw.tasks.logs.search', 'Search logs...')}
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
-          className="h-8 pr-8 pl-7 text-xs"
+          className="h-8 ps-7 pe-8 text-xs"
         />
         {searchText && (
           <Button
             variant="ghost"
             size="icon-sm"
-            className="-translate-y-1/2 absolute top-1/2 right-1 size-6 text-muted-foreground shadow-none"
+            className="-translate-y-1/2 absolute end-1 top-1/2 size-6 text-muted-foreground shadow-none"
             onClick={() => setSearchText('')}>
             <X size={12} />
           </Button>
@@ -834,9 +834,9 @@ const CreateForm: FC<{
                     value={scheduleValue}
                     onChange={(e) => setScheduleValue(e.target.value)}
                     placeholder={t('agent.cherryClaw.tasks.intervalPlaceholder')}
-                    className="pr-10"
+                    className="pe-10"
                   />
-                  <span className="-translate-y-1/2 pointer-events-none absolute top-1/2 right-3 text-muted-foreground text-xs">
+                  <span className="-translate-y-1/2 pointer-events-none absolute end-3 top-1/2 text-muted-foreground text-xs">
                     {t('agent.cherryClaw.tasks.intervalUnit')}
                   </span>
                 </div>
@@ -863,9 +863,9 @@ const CreateForm: FC<{
                   value={timeoutMinutes}
                   onChange={(e) => setTimeoutMinutes(e.target.value)}
                   placeholder={t('agent.cherryClaw.tasks.timeout.placeholder')}
-                  className="pr-10"
+                  className="pe-10"
                 />
-                <span className="-translate-y-1/2 pointer-events-none absolute top-1/2 right-3 text-muted-foreground text-xs">
+                <span className="-translate-y-1/2 pointer-events-none absolute end-3 top-1/2 text-muted-foreground text-xs">
                   {t('agent.cherryClaw.tasks.intervalUnit')}
                 </span>
               </div>
@@ -1047,7 +1047,7 @@ const TasksSettings: FC = () => {
         style={{ height: 'calc(100vh - var(--navbar-height) - 6px)' }}>
         {/* Left panel: task list */}
         <Scrollbar
-          className="flex flex-col gap-1.25 border-border border-r-[0.5px] p-3 pb-12"
+          className="flex flex-col gap-1.25 border-border border-e-[0.5px] p-3 pb-12"
           style={{ width: 'var(--settings-width)', height: 'calc(100vh - var(--navbar-height))' }}>
           <div className="flex items-center justify-between">
             <SettingTitle>{t('settings.scheduledTasks.title')}</SettingTitle>

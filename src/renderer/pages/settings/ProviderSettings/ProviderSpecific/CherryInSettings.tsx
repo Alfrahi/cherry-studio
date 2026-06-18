@@ -65,7 +65,7 @@ const CherryInSettings: FC<CherryInSettingsProps> = ({ providerId }) => {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
-        className={cn(fieldClasses.inputGroupBlock, 'group cursor-pointer justify-between text-left outline-none')}>
+        className={cn(fieldClasses.inputGroupBlock, 'group cursor-pointer justify-between text-start outline-none')}>
         <span
           className={cn(
             fieldClasses.input,
@@ -75,7 +75,7 @@ const CherryInSettings: FC<CherryInSettingsProps> = ({ providerId }) => {
         </span>
         <ChevronDown
           size={12}
-          className="ml-2 shrink-0 text-muted-foreground/55 transition-transform group-data-[state=open]:rotate-180"
+          className="ms-2 shrink-0 text-muted-foreground/55 transition-transform group-data-[state=open]:rotate-180"
           aria-hidden
         />
       </PopoverTrigger>

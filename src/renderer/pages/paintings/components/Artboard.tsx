@@ -77,7 +77,7 @@ const Artboard: FC<ArtboardProps> = ({ painting, isLoading, onCancel, imageCover
                 variant="outline"
                 onClick={onPrevImage}
                 aria-label={t('preview.previous')}
-                className="-translate-y-1/2 absolute top-1/2 left-2.5 z-20 opacity-80 hover:opacity-100">
+                className="-translate-y-1/2 absolute start-2.5 top-1/2 z-20 opacity-80 hover:opacity-100">
                 ←
               </Button>
             )}
@@ -94,11 +94,11 @@ const Artboard: FC<ArtboardProps> = ({ painting, isLoading, onCancel, imageCover
                 variant="outline"
                 onClick={onNextImage}
                 aria-label={t('preview.next')}
-                className="-translate-y-1/2 absolute top-1/2 right-2.5 z-20 opacity-80 hover:opacity-100">
+                className="-translate-y-1/2 absolute end-2.5 top-1/2 z-20 opacity-80 hover:opacity-100">
                 →
               </Button>
             )}
-            <div className="-translate-x-1/2 absolute bottom-2.5 left-1/2 rounded-full bg-foreground/60 px-2 py-1 text-background text-xs">
+            <div className="-translate-x-1/2 absolute start-1/2 bottom-2.5 rounded-full bg-foreground/60 px-2 py-1 text-background text-xs">
               {displayedImageIndex + 1} / {painting.files.length}
             </div>
           </div>
@@ -107,7 +107,7 @@ const Artboard: FC<ArtboardProps> = ({ painting, isLoading, onCancel, imageCover
         ) : null}
 
         {isLoading && (
-          <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-30">
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute start-1/2 top-1/2 z-30">
             <LoadingStateCard text={loadingText} onCancel={onCancel} cancelLabel={t('common.cancel')} />
           </div>
         )}

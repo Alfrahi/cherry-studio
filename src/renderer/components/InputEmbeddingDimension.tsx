@@ -92,7 +92,7 @@ const InputEmbeddingDimension = ({
           aria-label={t('common.get_embedding_dimension')}
           disabled={disabled || loading}
           onClick={handleFetchDimension}
-          className={cn('-ml-px rounded-l-none', loading && 'opacity-80')}
+          className={cn('-ms-px rounded-start-none', loading && 'opacity-80')}
           size="icon-sm">
           <RefreshIcon size={16} className={loading ? 'animation-rotate' : ''} />
         </Button>

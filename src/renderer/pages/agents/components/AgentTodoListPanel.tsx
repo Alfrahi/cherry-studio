@@ -353,7 +353,7 @@ const AgentTodoListHeader = () => {
   return (
     <button
       type="button"
-      className="flex w-full items-center gap-2 px-3.5 py-2.5 text-left transition-colors hover:bg-muted/50"
+      className="flex w-full items-center gap-2 px-3.5 py-2.5 text-start transition-colors hover:bg-muted/50"
       aria-expanded={isTasksExpanded}
       onClick={toggleTasks}>
       <ChevronDown
@@ -440,7 +440,7 @@ const AgentTodoListDetails = () => {
     <div>
       <button
         type="button"
-        className="flex w-full items-center gap-2 border-border/40 border-t px-4 py-2 text-left transition-colors hover:bg-muted/50"
+        className="flex w-full items-center gap-2 border-border/40 border-t px-4 py-2 text-start transition-colors hover:bg-muted/50"
         aria-expanded={isDetailsExpanded}
         onClick={toggleDetails}>
         <ChevronDown
@@ -473,7 +473,7 @@ const AgentTodoListDetailGroup = ({ detail }: { detail: AgentTodoDetailGroup }) 
         <Icon size={10} className="text-primary" />
         <span className="min-w-0 flex-1 truncate text-[10px] text-muted-foreground">{t(detail.titleKey)}</span>
       </div>
-      <div className="mb-1 ml-6">
+      <div className="ms-6 mb-1">
         {detail.summaryKey && (
           <div className="mb-1 rounded-md bg-muted/60 px-3 py-2">
             <p className="m-0 text-[10px] text-foreground/60 leading-[1.6]">{t(detail.summaryKey)}</p>

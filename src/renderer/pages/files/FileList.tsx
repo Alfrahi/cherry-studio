@@ -64,7 +64,7 @@ const FileList: React.FC<FileItemProps> = ({ id, list, files }) => {
                 <div className="truncate">{formatFileSize(file.size)}</div>
               </div>
               <button
-                className="absolute top-2 right-2 z-[1] flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity duration-300 hover:bg-red-600/80 group-hover:opacity-100"
+                className="absolute end-2 top-2 z-[1] flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity duration-300 hover:bg-red-600/80 group-hover:opacity-100"
                 title={t('files.delete.title')}
                 type="button"
                 onClick={(e) => {
