@@ -425,7 +425,11 @@ vi.mock('@cherrystudio/ui', () => {
     DialogHeader: ({ children, ...props }) =>
       React.createElement('div', { ...props, 'data-testid': 'dialog-header' }, children),
     DialogTitle: ({ children, ...props }) =>
-      React.createElement('h2', { ...props, 'data-testid': 'dialog-title' }, children),
+      React.createElement(
+        'h2',
+        { ...props, role: 'heading', 'aria-level': '2', 'data-testid': 'dialog-title' },
+        children
+      ),
     DialogFooter: ({ children, ...props }) =>
       React.createElement('div', { ...props, 'data-testid': 'dialog-footer' }, children),
     Label: ({ children, ...props }) => React.createElement('label', props, children),
