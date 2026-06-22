@@ -160,42 +160,12 @@ const MiniApp: FC<Props> = ({ app, onClick, onOpen, size = 60, isLast, variant =
               className={cn(
                 'absolute rounded-full bg-background',
                 isLaunchpad
-                  ? '-right-[3px] -bottom-[3px] p-[3px] shadow-[0_0_0_1px_var(--color-border-subtle)]'
-                  : '-right-0.5 -bottom-0.5 p-0.5'
+                  ? '-inset-inline-end-[3px] -bottom-[3px] p-[3px] shadow-[0_0_0_1px_var(--color-border-subtle)]'
+                  : '-inset-inline-end-0.5 -bottom-0.5 p-0.5'
               )}>
               <IndicatorLight color="#22c55e" size={6} animation={!isActive} />
             </div>
           )}
-          onClick={handleClick}
-          {...activationProps}>
-          <div
-            className={cn(
-              'mini-app-icon-frame relative flex items-center justify-center',
-              isLaunchpad &&
-                'size-[58px] rounded-[14px] border border-border-subtle bg-transparent transition-[border-color,background-color] duration-[160ms] ease-in-out motion-reduce:transition-none'
-            )}>
-            <MiniAppIcon size={size} app={app} appearance={isLaunchpad ? 'plain' : 'avatar'} />
-            {isOpened && (
-              <div
-                className={cn(
-                  'absolute rounded-full bg-background',
-                  isLaunchpad
-                    ? '-end-[3px] -bottom-[3px] p-[3px] shadow-[0_0_0_1px_var(--color-border-subtle)]'
-                    : '-end-0.5 -bottom-0.5 p-0.5'
-                )}>
-                <IndicatorLight color="#22c55e" size={6} animation={!isActive} />
-              </div>
-            )}
-          </div>
-          <div
-            className={cn(
-              'w-full select-none text-center text-foreground-secondary',
-              isLaunchpad
-                ? 'mt-2 min-h-9 max-w-[92px] overflow-hidden whitespace-normal text-[13px] leading-[18px] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box] [overflow-wrap:anywhere]'
-                : 'mt-[5px] max-w-20 text-xs leading-normal'
-            )}>
-            {isLaunchpad ? displayName : <MarqueeText>{displayName}</MarqueeText>}
-          </div>
         </div>
         <div
           className={cn(

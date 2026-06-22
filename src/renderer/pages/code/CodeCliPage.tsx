@@ -527,7 +527,7 @@ const CodeCliPage: FC = () => {
   return (
     <div className="flex h-full min-h-0 flex-1 flex-col overflow-hidden text-foreground">
       <Navbar>
-        <NavbarCenter className="border-e-0">{t('code.title')}</NavbarCenter>
+        <NavbarCenter className="border-r-0">{t('code.title')}</NavbarCenter>
       </Navbar>
 
       <div className="relative flex min-h-0 flex-1 flex-col">
@@ -549,64 +549,19 @@ const CodeCliPage: FC = () => {
                   <DialogTitle>{activeMeta.label}</DialogTitle>
                 </DialogHeader>
 
-              <div className="flex min-w-0 flex-col gap-4">
-                {selectedCliTool !== codeCLI.githubCopilotCli && selectedCliTool !== codeCLI.qoderCli && (
-                  <div className="min-w-0">
-                    <FieldLabel hint={t('code.model_hint')}>{t('code.model')}</FieldLabel>
-                    <SelectDropdown
-                      items={modelItems}
-                      virtualize
-                      selectedId={selectedModel}
-                      onSelect={handleModelChange}
-                      placeholder={t('code.model_placeholder')}
-                      triggerClassName="data-[state=open]:border-foreground! data-[state=open]:ring-foreground/10!"
-                      renderSelected={(item) => (
-                        <div className="flex min-w-0 flex-1 items-center gap-2 overflow-hidden">
-                          <ModelAvatar model={item.model} size={18} />
-                          <span className="truncate text-foreground">{item.model.name || item.model.id}</span>
-                        </div>
-                      )}
-                      renderItem={(item, isSelected) => (
-                        <div className="flex min-w-0 items-center gap-2">
-                          <ModelAvatar model={item.model} size={18} />
-                          <span className="min-w-0 flex-1 truncate">{item.model.name || item.model.id}</span>
-                          <span className="shrink-0 text-muted-foreground text-xs">
-                            {getProviderDisplayName(item.provider)}
-                          </span>
-                          {isSelected && <Check size={11} className="ms-0.5 shrink-0 text-foreground" />}
-                        </div>
-                      )}
-                    />
-                  </div>
-                )}
-
-                <div className="min-w-0">
-                  <FieldLabel hint={t('code.working_directory_hint')}>{t('code.working_directory')}</FieldLabel>
-                  <div className="flex min-w-0 items-center gap-2">
-                    <div className="min-w-0 flex-1">
-                      <SelectDropdown
-                        items={directoryItems}
-                        selectedId={currentDirectory || null}
-                        onSelect={(id) => void setCurrentDir(id)}
-                        onRemove={handleRemoveDirectory}
-                        removeLabel={t('common.delete')}
-                        emptyText={t('common.none')}
-                        placeholder={t('code.folder_placeholder')}
-                        triggerClassName="data-[state=open]:border-foreground! data-[state=open]:ring-foreground/10!"
-                        renderTriggerLeading={<FolderOpen size={11} className="shrink-0 text-muted-foreground" />}
-                        renderSelected={(item) => (
-                          <span className="min-w-0 flex-1 truncate font-mono text-foreground">{item.id}</span>
-                        )}
-                        renderItem={(item, isSelected) => (
-                          <>
-                            <FolderOpen
-                              size={11}
-                              className={isSelected ? 'shrink-0 text-foreground' : 'shrink-0 text-muted-foreground'}
-                            />
-                            <span className="min-w-0 flex-1 truncate font-mono">{item.id}</span>
-                            {isSelected && <Check size={11} className="shrink-0 text-foreground" />}
-                          </>
-                        )}
+                <div className="flex flex-col gap-4">
+                  {selectedCliTool !== codeCLI.githubCopilotCli && selectedCliTool !== codeCLI.qoderCli && (
+                    <div>
+                      <FieldLabel hint={t('code.model_hint')}>{t('code.model')}</FieldLabel>
+                      <ModelSelector
+                        multiple={false}
+                        selectionType="id"
+                        value={selectedModelValue}
+                        onSelect={handleModelChange}
+                        filter={codeCliModelFilter}
+                        showTagFilter={false}
+                        portalContainer={modelSelectorPortalContainer}
+                        trigger={renderModelSelectorTrigger()}
                       />
                     </div>
                   )}
