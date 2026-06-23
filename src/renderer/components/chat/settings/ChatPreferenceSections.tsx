@@ -374,7 +374,7 @@ const ChatPreferenceSections: FC = () => {
           {codeExecution.enabled && (
             <>
               <SettingDivider />
-              <SettingRow className="pl-2">
+              <SettingRow className="ps-2">
                 <SettingRowTitleSmall hint={t('chat.settings.code_execution.timeout_minutes.tip')}>
                   {t('chat.settings.code_execution.timeout_minutes.label')}
                 </SettingRowTitleSmall>
@@ -401,7 +401,7 @@ const ChatPreferenceSections: FC = () => {
           {codeEditor.enabled && (
             <>
               <SettingDivider />
-              <SettingRow className="pl-2">
+              <SettingRow className="ps-2">
                 <SettingSwitch
                   checked={codeEditor.highlightActiveLine}
                   onCheckedChange={(checked) => setCodeEditor({ highlightActiveLine: checked })}
@@ -409,7 +409,7 @@ const ChatPreferenceSections: FC = () => {
                 />
               </SettingRow>
               <SettingDivider />
-              <SettingRow className="pl-2">
+              <SettingRow className="ps-2">
                 <SettingSwitch
                   checked={codeEditor.foldGutter}
                   onCheckedChange={(checked) => setCodeEditor({ foldGutter: checked })}
@@ -417,7 +417,7 @@ const ChatPreferenceSections: FC = () => {
                 />
               </SettingRow>
               <SettingDivider />
-              <SettingRow className="pl-2">
+              <SettingRow className="ps-2">
                 <SettingSwitch
                   checked={codeEditor.autocompletion}
                   onCheckedChange={(checked) => setCodeEditor({ autocompletion: checked })}
@@ -425,7 +425,7 @@ const ChatPreferenceSections: FC = () => {
                 />
               </SettingRow>
               <SettingDivider />
-              <SettingRow className="pl-2">
+              <SettingRow className="ps-2">
                 <SettingSwitch
                   checked={codeEditor.keymap}
                   onCheckedChange={(checked) => setCodeEditor({ keymap: checked })}

@@ -36,7 +36,7 @@ const HtmlArtifactsCard: FC<Props> = ({ html, onSave, editable = true, isStreami
   }
 
   const handleDownload = async () => {
-    const fileName = `${getFileNameFromHtmlTitle(title) || 'html-artifact'}.html`
+    const fileName = `${getFileNameFromHtmlTitle(title) || 'htms-artifact'}.html`
     const savedPath = await window.api.file.save(fileName, htmlContent)
     if (!savedPath) return
 
