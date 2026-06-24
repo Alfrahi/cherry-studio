@@ -223,7 +223,7 @@ const CodeCliPage: FC = () => {
     <button
       type="button"
       className="group flex h-9 w-full items-center justify-between rounded-md border border-border-muted bg-transparent px-3 text-sm transition-colors hover:bg-muted/30 data-[state=open]:border-foreground! data-[state=open]:ring-1 data-[state=open]:ring-foreground/10!">
-      <div className="flex min-w-0 flex-1 items-center gap-2 text-left">
+      <div className="flex min-w-0 flex-1 items-center gap-2 text-start">
         {selectedModelRecord ? (
           <>
             <ModelAvatar model={selectedModelRecord} size={18} />

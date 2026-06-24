@@ -915,7 +915,7 @@ export default function ComposerSurface({
               type="button"
               variant="link"
               size="sm"
-              className="h-auto min-h-0 w-fit justify-start gap-0 border-0 p-0 text-left font-medium text-primary text-xs leading-4 shadow-none hover:text-primary-hover focus-visible:border-0 focus-visible:text-primary-hover focus-visible:underline focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="h-auto min-h-0 w-fit justify-start gap-0 border-0 p-0 text-start font-medium text-primary text-xs leading-4 shadow-none hover:text-primary-hover focus-visible:border-0 focus-visible:text-primary-hover focus-visible:underline focus-visible:ring-0 focus-visible:ring-offset-0"
               onMouseDown={(event) => {
                 event.preventDefault()
                 event.stopPropagation()

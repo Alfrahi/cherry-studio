@@ -181,7 +181,7 @@ function FileTokenTooltip({
   return (
     <div
       className={cn(
-        'text-left',
+        'text-start',
         hasPreview ? 'w-56 space-y-2' : 'min-w-36 max-w-56',
         actions ? 'space-y-1.5' : 'space-y-2'
       )}>

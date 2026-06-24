@@ -168,7 +168,7 @@ function HeaderItem({ actions, className, command, icon, label, ref, variant = '
         )}
         {...props}>
         {icon && <ItemLeadingSlot>{icon}</ItemLeadingSlot>}
-        <span className="min-w-0 flex-1 truncate text-left font-medium text-[13px] text-sidebar-foreground/70 leading-5 group-hover:text-foreground group-focus-visible:text-foreground">
+        <span className="min-w-0 flex-1 truncate text-start font-medium text-[13px] text-sidebar-foreground/70 leading-5 group-hover:text-foreground group-focus-visible:text-foreground">
           {label}
         </span>
         {command && <CommandHint command={command} />}
@@ -509,7 +509,7 @@ function ItemTitle({ className, ref, ...props }: ItemTitleProps) {
     <span
       ref={ref}
       className={cn(
-        'min-w-0 flex-1 truncate text-left font-normal text-[13px] text-sidebar-foreground/70 leading-5 group-hover:text-foreground group-focus-visible:text-foreground group-data-[selected=true]:font-medium group-data-[selected=true]:text-foreground',
+        'min-w-0 flex-1 truncate text-start font-normal text-[13px] text-sidebar-foreground/70 leading-5 group-hover:text-foreground group-focus-visible:text-foreground group-data-[selected=true]:font-medium group-data-[selected=true]:text-foreground',
         className
       )}
       {...props}

@@ -69,10 +69,10 @@ const PROMPT_VARIABLES: { name: string; i18n: string }[] = [
 ]
 
 const EDIT_DIALOG_TAB_TRIGGER_CLASS =
-  'h-8 w-full flex-none justify-start rounded-md bg-transparent px-0 text-left font-medium text-muted-foreground text-sm shadow-none transition-colors hover:bg-accent/45 hover:text-foreground data-[state=active]:bg-accent/60 data-[state=active]:text-foreground data-[state=active]:shadow-none'
+  'h-8 w-full flex-none justify-start rounded-md bg-transparent px-0 text-start font-medium text-muted-foreground text-sm shadow-none transition-colors hover:bg-accent/45 hover:text-foreground data-[state=active]:bg-accent/60 data-[state=active]:text-foreground data-[state=active]:shadow-none'
 
 const EDIT_DIALOG_GROUP_BUTTON_CLASS =
-  'flex h-8 w-full items-center justify-start rounded-md bg-transparent px-0 text-left font-medium text-muted-foreground text-sm transition-colors hover:bg-accent/45 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+  'flex h-8 w-full items-center justify-start rounded-md bg-transparent px-0 text-start font-medium text-muted-foreground text-sm transition-colors hover:bg-accent/45 hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
 
 const EDIT_DIALOG_CHILD_TAB_TRIGGER_CLASS = EDIT_DIALOG_TAB_TRIGGER_CLASS
 
@@ -262,7 +262,7 @@ export function EditDialogShell<TValues extends FieldValues>({
                               data-expanded={groupExpanded || undefined}
                               className={EDIT_DIALOG_GROUP_BUTTON_CLASS}
                               onClick={() => toggleTabGroup(tab.id)}>
-                              <span className="min-w-0 flex-1 truncate px-1 text-left">{tab.label}</span>
+                              <span className="min-w-0 flex-1 truncate px-1 text-start">{tab.label}</span>
                               <ChevronDown
                                 size={13}
                                 strokeWidth={1.8}
@@ -272,7 +272,7 @@ export function EditDialogShell<TValues extends FieldValues>({
                             </button>
                           ) : (
                             <TabsTrigger value={tab.id} className={EDIT_DIALOG_TAB_TRIGGER_CLASS}>
-                              <span className="min-w-0 flex-1 truncate px-1 text-left">{tab.label}</span>
+                              <span className="min-w-0 flex-1 truncate px-1 text-start">{tab.label}</span>
                             </TabsTrigger>
                           )}
                           {hasChildren && groupExpanded ? (

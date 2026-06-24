@@ -136,7 +136,7 @@ const SidebarRow = ({ active, icon, label, count, onClick }: SidebarRowProps) =>
   <button
     type="button"
     className={cn(
-      'flex h-8 w-full items-center gap-2 rounded-md px-2.5 text-left text-xs leading-4 transition-colors',
+      'flex h-8 w-full items-center gap-2 rounded-md px-2.5 text-start text-xs leading-4 transition-colors',
       active
         ? 'bg-muted font-semibold text-foreground'
         : 'font-medium text-foreground-secondary hover:bg-muted hover:text-foreground'

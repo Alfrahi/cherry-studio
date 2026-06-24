@@ -84,7 +84,7 @@ const ProgressBar: React.FC<{ value: number; indeterminate?: boolean }> = ({ val
       className={cn(
         'h-full rounded-full bg-primary transition-[width] duration-300',
         indeterminate &&
-          'animation-migration-backup-progress-indeterminate absolute left-0 w-1/3 min-w-20 bg-linear-to-r from-primary/0 via-primary to-primary/0 transition-none'
+          'animation-migration-backup-progress-indeterminate absolute start-0 w-1/3 min-w-20 bg-linear-to-r from-primary/0 via-primary to-primary/0 transition-none'
       )}
       style={indeterminate ? undefined : { width: `${Math.max(0, Math.min(100, value))}%` }}
     />
@@ -201,7 +201,7 @@ const BackupChoiceRow: React.FC<{
     type="button"
     onClick={onSelect}
     className={cn(
-      'flex w-full items-start gap-3 rounded-xl border px-4 py-3 text-left transition-colors',
+      'flex w-full items-start gap-3 rounded-xl border px-4 py-3 text-start transition-colors',
       selected ? 'border-border-active bg-accent' : 'border-border bg-muted/10 hover:bg-muted/20'
     )}>
     <span className={cn('mt-0.5 shrink-0', selected ? 'text-foreground' : 'text-foreground-muted')}>{icon}</span>
@@ -753,7 +753,7 @@ const MigrationApp: React.FC = () => {
                   </AccordionTrigger>
                   <AccordionContent className="pt-0 pb-3" contentClassName="text-foreground-secondary">
                     <p className="text-xs leading-relaxed">{t('migration.completed.warning_description')}</p>
-                    <ul className="mt-2 max-h-40 list-disc space-y-1 overflow-y-auto pl-5 text-xs leading-relaxed">
+                    <ul className="mt-2 max-h-40 list-disc space-y-1 overflow-y-auto ps-5 text-xs leading-relaxed">
                       {warnings.map((warning, index) => (
                         <li key={index} className="wrap-break-words">
                           {warning}
@@ -884,7 +884,7 @@ const MigrationApp: React.FC = () => {
             progress.stage === 'completed' && 'overflow-x-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
           )}>
           {progress.stage === 'introduction' && (
-            <div className="absolute top-2 start-3 z-10">
+            <div className="absolute start-3 top-2 z-10">
               <MigrationToolsMenu
                 open={skipMenuOpen}
                 onOpenChange={setSkipMenuOpen}

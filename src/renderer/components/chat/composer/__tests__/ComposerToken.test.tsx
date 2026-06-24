@@ -314,7 +314,7 @@ describe('ComposerToken', () => {
     expect(screen.getByTestId('composer-token-tooltip-content')).toHaveTextContent('first line second line')
     expect(screen.getByTestId('composer-token-tooltip-content')).not.toHaveTextContent('...')
     const tooltipBody = screen.getByTestId('composer-token-tooltip-content').firstElementChild as HTMLElement
-    expect(tooltipBody).toHaveClass('whitespace-pre-wrap', 'text-left', 'overflow-hidden')
+    expect(tooltipBody).toHaveClass('whitespace-pre-wrap', 'text-start', 'overflow-hidden')
     expect(tooltipBody.className).toContain('[-webkit-line-clamp:4]')
   })
 

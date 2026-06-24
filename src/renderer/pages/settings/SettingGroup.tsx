@@ -31,7 +31,7 @@ export const CollapsibleSettingGroup = ({
           data-state={isExpanded ? 'open' : 'closed'}
           onClick={() => setIsExpanded(!isExpanded)}
           className={cn(
-            "inline-flex h-9 w-full shrink-0 items-center justify-start gap-1.5 whitespace-nowrap rounded-[var(--radius-lg)] px-1.5 py-1.5 text-left font-normal text-muted-foreground text-xs tracking-normal outline-none transition-all hover:bg-accent hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-30 has-[>svg]:px-3 aria-invalid:border-destructive-border aria-invalid:ring-destructive-ring data-[state=open]:text-foreground dark:aria-invalid:ring-destructive-ring dark:hover:bg-accent/50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+            "inline-flex h-9 w-full shrink-0 items-center justify-start gap-1.5 whitespace-nowrap rounded-[var(--radius-lg)] px-1.5 py-1.5 text-start font-normal text-muted-foreground text-xs tracking-normal outline-none transition-all hover:bg-accent hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-30 has-[>svg]:px-3 aria-invalid:border-destructive-border aria-invalid:ring-destructive-ring data-[state=open]:text-foreground dark:aria-invalid:ring-destructive-ring dark:hover:bg-accent/50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
           )}>
           <ChevronRight className={cn('text-current transition-transform', isExpanded && 'rotate-90')} />
           <span className="min-w-0 truncate">{title}</span>

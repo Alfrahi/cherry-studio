@@ -161,7 +161,7 @@ const ConversationShellTopRightTool = ({ isWindow, trailing, children }: TopRigh
       data-navbar-right-occupant
       className={cn(
         // right offset = 8px gap + the OS window controls corner (--window-controls-width, 0px elsewhere)
-        'absolute top-0 end-[calc(0.5rem+var(--window-controls-width,0px))] z-20 flex items-center gap-0.5 [-webkit-app-region:no-drag]',
+        'absolute end-[calc(0.5rem+var(--window-controls-width,0px))] top-0 z-20 flex items-center gap-0.5 [-webkit-app-region:no-drag]',
         // Window mode: shorter bar (lines up with the traffic lights) + injected controls
         // (pin / back-to-main) to the left of the page's own tool.
         isWindow ? TITLE_BAR_HEIGHT_CLASS : 'h-(--navbar-height)'
